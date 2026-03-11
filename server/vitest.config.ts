@@ -8,5 +8,10 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
     },
+    exclude: [
+      '**/node_modules/**',
+      '**/e2e/**', 
+      '**/*.spec.ts', // Exclude Playwright's default extension
+    ],
   },
 });
